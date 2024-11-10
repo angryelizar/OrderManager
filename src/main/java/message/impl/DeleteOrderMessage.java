@@ -1,8 +1,8 @@
 package message.impl;
 
-import message.Message;
+import message.OrderManagerMessage;
 
-public class DeleteOrderMessage implements Message {
+public class DeleteOrderMessage implements OrderManagerMessage {
     private String id;
 
     public DeleteOrderMessage(String id) {

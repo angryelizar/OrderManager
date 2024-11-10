@@ -1,9 +1,10 @@
 package message.impl;
 
-import message.Message;
+import message.OrderManagerMessage;
+import message.OrderMessage;
 import state.OrderStatus;
 
-public class UpdateOrderStatusMessage implements Message {
+public class UpdateOrderStatusMessage implements OrderManagerMessage, OrderMessage {
     private String id;
     private OrderStatus status;
 

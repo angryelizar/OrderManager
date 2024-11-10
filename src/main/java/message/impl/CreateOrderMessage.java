@@ -1,8 +1,8 @@
 package message.impl;
 
-import message.Message;
+import message.OrderManagerMessage;
 
-public class CreateOrderMessage implements Message {
+public class CreateOrderMessage implements OrderManagerMessage {
     private String id;
 
     public CreateOrderMessage(String id) {

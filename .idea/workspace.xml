@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32c033e-8338-46ab-ad7e-c6141b9fec06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/message/OrderMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/state/Completed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/state/Created.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/state/InProgress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258c08c5ab96ad1998dc00b71788ad3cd4263396" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bdb51a2e989f5520fe2895e01c3ce981da40c5f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b128a7d5e512bae2c2d80366e02b6d176386eeb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b128a7d5e512bae2c2d80366e02b6d176386eeb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1574dbfb6f6fd99ccc6fd666a5992ada42311d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba1ccdffbdf31f06561f988d9d266fdf5137fa95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd5e0924021cbba6e901ae6946cd91296232ae0e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/258c08c5ab96ad1998dc00b71788ad3cd4263396" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4bdb51a2e989f5520fe2895e01c3ce981da40c5f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/1/b1574dbfb6f6fd99ccc6fd666a5992ada42311d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/a/ba1ccdffbdf31f06561f988d9d266fdf5137fa95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/d/cd5e0924021cbba6e901ae6946cd91296232ae0e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/OrderManagerMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/CreateOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/CreateOrderMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/DeleteOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/DeleteOrderMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/OrderRepositoryStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/OrderRepositoryStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,29 +37,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "angryelizar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;angryelizar&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/angryelizar/OrderManager.git",
-    "accountId": "d28e9039-99dc-4b7f-931b-e04cc4fc4895"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/angryelizar/OrderManager.git&quot;,
+    &quot;accountId&quot;: &quot;d28e9039-99dc-4b7f-931b-e04cc4fc4895&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oc2DSUImJJR4CKnYQNKSg55pxY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -59,6 +69,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.OrderManager.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -96,7 +107,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731154424610</updated>
-      <workItem from="1731154425925" duration="9451000" />
+      <workItem from="1731154425925" duration="13102000" />
+      <workItem from="1731420565299" duration="3154000" />
     </task>
     <servers />
   </component>

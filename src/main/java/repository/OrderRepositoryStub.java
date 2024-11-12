@@ -2,8 +2,6 @@ package repository;
 
 import akka.actor.typed.ActorRef;
 import message.OrderMessage;
-import model.Order;
-import model.OrderStatus;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

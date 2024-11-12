@@ -3,12 +3,6 @@
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 G
 src/main/java/Main.java,e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10
-S
-#src/main/java/actor/HelloActor.java,c/d/cd5e0924021cbba6e901ae6946cd91296232ae0e
-U
-%src/main/java/actor/OrderManager.java,b/a/ba1ccdffbdf31f06561f988d9d266fdf5137fa95
-R
-"src/main/java/message/Message.java,b/1/b1574dbfb6f6fd99ccc6fd666a5992ada42311d2
 Z
 *src/main/java/actor/OrderManagerActor.java,8/b/8b128a7d5e512bae2c2d80366e02b6d176386eeb
 T
@@ -19,14 +13,10 @@ b
 2src/main/java/message/impl/DeleteOrderMessage.java,d/e/de1106e44681cdba4758205dd5e269d25ac44a83
 h
 8src/main/java/message/impl/UpdateOrderStatusMessage.java,f/5/f5c0189ab5d487e5bad57fbb349c9d0bdb75316d
-]
--src/main/java/repository/OrderRepository.java,4/b/4bdb51a2e989f5520fe2895e01c3ce981da40c5f
 a
 1src/main/java/repository/OrderRepositoryStub.java,7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a
 N
 src/main/java/model/Order.java,d/a/da40720aeeaaed55b9015b87ce0ba9418140ed2f
-H
-src/main/java/Order.java,2/5/258c08c5ab96ad1998dc00b71788ad3cd4263396
 T
 $src/main/java/model/OrderStatus.java,5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7
 T
@@ -40,3 +30,23 @@ S
 .src/main/java/message/OrderManagerMessage.java,5/8/58df3f2ae9060ad9dad9f0c9709cfef0a74d8c4a
 W
 'src/main/java/message/OrderMessage.java,9/f/9fae4abd6acaa1c022d13b19e5f0d823a209c447
+P
+ src/main/java/state/Created.java,d/7/d74febcd05aa5f63dde02fe8fb3688cb0f0fad0c
+S
+#src/main/java/state/InProgress.java,0/1/01b8ce0992dca69c44deb657111fa9127221bf89
+R
+"src/main/java/state/Completed.java,0/0/00b4bbbe881596bb9c69629edd73d783a02393ac
+Q
+!src/main/java/state/Canceled.java,3/e/3eca26b48f654992771895199889f8f4e3aa1e17
+R
+"src/main/java/state/Cancelled.java,4/c/4c4c8c3570428760472f437a23ca5b5abad7d01d
+X
+(.idea/runConfigurations/OrderManager.xml,2/f/2f6ddc9532110377fe5042566a90a52b6443d59b
+d
+4src/main/java/exception/OrderActorStateExcepton.java,e/e/ee50f7efe0c98e5ce10919420136e7301e4a0141
+e
+5src/main/java/exception/OrderActorStateExcepiton.java,a/0/a04aeb40526f3d76826bbe7537dfc7b3af5ced61
+e
+5src/main/java/exception/OrderActorStateException.java,c/1/c12d80aa4c2b5ecde350a4bfcdd36477d0df0147
+P
+ src/main/java/util/TextUtil.java,5/c/5c5f89ac575acb6d394d76267379e83c9d1fff52

@@ -7,10 +7,10 @@ import message.OrderManagerMessage;
 import message.OrderMessage;
 import message.impl.CreateOrderMessage;
 import message.impl.UpdateOrderStatusMessage;
-import model.OrderStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import repository.OrderRepositoryStub;
+import state.Created;
 
 public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
     private final Logger log = LoggerFactory.getLogger(OrderManagerActor.class);
@@ -45,8 +45,7 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
         }
 
         int orderId = createOrderMessage.getId();
-        OrderStatus orderStatus = new OrderStatus(enums.OrderStatus.CREATED.getValue());
-        ActorRef<OrderMessage> orderActor  = getContext().spawn(OrderActor.create(Integer.toString(orderId), orderStatus), "OrderActor-" + orderId);
+        ActorRef<OrderMessage> orderActor  = getContext().spawn(OrderActor.create(Integer.toString(orderId), new Created()), "OrderActor-" + orderId);
 
         orderRepositoryStub.createOrder(createOrderMessage.getId(), orderActor);
         log.info("Created a new order with ID {}", createOrderMessage.getId());

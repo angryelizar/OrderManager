@@ -7,16 +7,39 @@ import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 import message.OrderMessage;
 import message.impl.UpdateOrderStatusMessage;
-import model.OrderStatus;
+import state.Created;
+import state.OrderStatus;
 
 public class OrderActor extends AbstractBehavior<OrderMessage> {
     private final String id;
     private OrderStatus status;
+    private String currentState;
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public String getCurrentState() {
+        return currentState;
+    }
+
+    public void setCurrentState(String currentState) {
+        this.currentState = currentState;
+    }
 
     public OrderActor(ActorContext<OrderMessage> context, String id, OrderStatus status) {
         super(context);
         this.id = id;
-        this.status = new OrderStatus(enums.OrderStatus.CREATED.getValue());
+        this.status = new Created();
+        this.currentState = enums.OrderStatus.CREATED.getValue();
     }
 
     public static Behavior<OrderMessage> create(String id, OrderStatus status) {

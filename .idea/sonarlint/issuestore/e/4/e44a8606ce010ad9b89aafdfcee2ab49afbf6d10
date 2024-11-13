@@ -1,8 +1,5 @@
 
 z
-java:S1854"7Remove this useless assignment to local variable "app".(ì ƒÖ8³…À²²2J$3e76297a-cb8c-476c-8a04-adb1b7510cb3
-“
-java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78Šø§·²2
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(Ô›ÌÇÿÿÿÿÿ8«¼‡²²2J$a4ce5e14-af6f-4438-b985-aeb402673020
+java:S1854"7Remove this useless assignment to local variable "app".(ì ƒÖ8³…À²²2J$d91ff875-419f-44db-aa13-1b54ed4b3b82
 k
-java:S1481"(Remove this unused "app" local variable.(ì ƒÖ8¿…À²²2J$ea65d4c0-827f-42e4-b32e-21f130e86df6
+java:S1481"(Remove this unused "app" local variable.(ì ƒÖ8¿…À²²2J$3c1c53d9-f2e5-4746-bec0-bf9192bbfcc8

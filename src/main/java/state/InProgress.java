@@ -1,26 +1,27 @@
 package state;
 
 import actor.OrderActor;
-import exception.OrderActorStateException;
 
 public class InProgress implements OrderStatus {
     @Override
     public void onCreated(OrderActor order) {
-        throw new OrderActorStateException("Order in progress!");
+        order.getContext().getLog().error("Order in progress!");
     }
 
     @Override
     public void onInProgress(OrderActor order) {
-        throw new OrderActorStateException("Order already in progress!");
+        order.getContext().getLog().error("Order already in progress!");
     }
 
     @Override
     public void onCanceled(OrderActor order) {
+        order.getContext().getLog().info("Order canceled!");
         order.setStatus(new Cancelled());
     }
 
     @Override
-    public void onCompleted(OrderActor order) throws OrderActorStateException {
+    public void onCompleted(OrderActor order) {
+        order.getContext().getLog().info("Order completed!");
         order.setStatus(new Completed());
     }
 }

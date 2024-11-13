@@ -5,27 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32c033e-8338-46ab-ad7e-c6141b9fec06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/Completed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/Created.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/InProgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258c08c5ab96ad1998dc00b71788ad3cd4263396" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bdb51a2e989f5520fe2895e01c3ce981da40c5f" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/state/StateContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1574dbfb6f6fd99ccc6fd666a5992ada42311d2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba1ccdffbdf31f06561f988d9d266fdf5137fa95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd5e0924021cbba6e901ae6946cd91296232ae0e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/258c08c5ab96ad1998dc00b71788ad3cd4263396" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4bdb51a2e989f5520fe2895e01c3ce981da40c5f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/1/b1574dbfb6f6fd99ccc6fd666a5992ada42311d2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/a/ba1ccdffbdf31f06561f988d9d266fdf5137fa95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/d/cd5e0924021cbba6e901ae6946cd91296232ae0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/OrderRepositoryStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/OrderRepositoryStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/OrderActorStateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/Completed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Completed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/Created.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Created.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/InProgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/InProgress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,26 +63,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.OrderManager.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "application.passwordSafe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrderManager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="message.impl" />
@@ -108,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1731154424610</updated>
       <workItem from="1731154425925" duration="13102000" />
-      <workItem from="1731420565299" duration="3154000" />
+      <workItem from="1731420565299" duration="6622000" />
+      <workItem from="1731504444012" duration="5004000" />
     </task>
     <servers />
   </component>

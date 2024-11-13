@@ -18,8 +18,6 @@ a
 N
 src/main/java/model/Order.java,d/a/da40720aeeaaed55b9015b87ce0ba9418140ed2f
 T
-$src/main/java/model/OrderStatus.java,5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7
-T
 $src/main/java/enums/OrderStatus.java,b/3/b3283e70d90e58b17a203a35769db3602c3f1b39
 :
 
@@ -36,17 +34,19 @@ S
 #src/main/java/state/InProgress.java,0/1/01b8ce0992dca69c44deb657111fa9127221bf89
 R
 "src/main/java/state/Completed.java,0/0/00b4bbbe881596bb9c69629edd73d783a02393ac
-Q
-!src/main/java/state/Canceled.java,3/e/3eca26b48f654992771895199889f8f4e3aa1e17
 R
 "src/main/java/state/Cancelled.java,4/c/4c4c8c3570428760472f437a23ca5b5abad7d01d
 X
 (.idea/runConfigurations/OrderManager.xml,2/f/2f6ddc9532110377fe5042566a90a52b6443d59b
-d
-4src/main/java/exception/OrderActorStateExcepton.java,e/e/ee50f7efe0c98e5ce10919420136e7301e4a0141
-e
-5src/main/java/exception/OrderActorStateExcepiton.java,a/0/a04aeb40526f3d76826bbe7537dfc7b3af5ced61
 e
 5src/main/java/exception/OrderActorStateException.java,c/1/c12d80aa4c2b5ecde350a4bfcdd36477d0df0147
-P
- src/main/java/util/TextUtil.java,5/c/5c5f89ac575acb6d394d76267379e83c9d1fff52
+U
+%src/main/java/state/StateContext.java,d/a/da7b92dc1b484baabc4d470eeb66cdfb401ba38c
+b
+2src/main/java/message/impl/SetCanceledMessage.java,4/8/4809f2f779c093d2958e7d6e4ba96c45e2307e6f
+d
+4src/main/java/message/impl/SetInProgressMessage.java,b/1/b1a49354fbc1d25189dc1dd77a339cff5bd97e69
+c
+3src/main/java/message/impl/SetCompletedMessage.java,1/e/1eff35aa9626642ac69e0566209bf9f1d1c402ab
+a
+1src/main/java/message/impl/SetCreatedMessage.java,3/8/3844579e42e9997957a1ecc797ad6872658cc3a5

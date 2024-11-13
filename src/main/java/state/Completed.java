@@ -1,26 +1,25 @@
 package state;
 
 import actor.OrderActor;
-import exception.OrderActorStateException;
 
 public class Completed implements OrderStatus {
     @Override
     public void onCreated(OrderActor order) {
-        throw new OrderActorStateException("Order has been created already!");
+        order.getContext().getLog().error("Order has been created already!");
     }
 
     @Override
     public void onInProgress(OrderActor order) {
-        throw new OrderActorStateException("Order has been in progress already!");
+        order.getContext().getLog().error("Completed order can't be in progress!");
     }
 
     @Override
     public void onCanceled(OrderActor order) {
-        throw new OrderActorStateException("Completed order can't be canceled!");
+        order.getContext().getLog().error("Completed order can't be canceled!");
     }
 
     @Override
-    public void onCompleted(OrderActor order) throws OrderActorStateException {
-        throw new OrderActorStateException("Order has been completed already!");
+    public void onCompleted(OrderActor order) {
+        order.getContext().getLog().error("Order has been completed already!");
     }
 }

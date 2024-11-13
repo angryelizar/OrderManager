@@ -13,8 +13,8 @@ public class UpdateOrderStatusMessage implements OrderManagerMessage, OrderMessa
         this.status = status;
     }
 
-    public String getId() {
-        return id;
+    public Integer getId() {
+        return Integer.parseInt(id);
     }
 
     public void setId(String id) {

@@ -11,6 +11,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import repository.OrderRepositoryStub;
 import state.Created;
+import state.OrderStatus;
+
+import java.util.Optional;
 
 public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
     private final Logger log = LoggerFactory.getLogger(OrderManagerActor.class);
@@ -30,8 +33,18 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
     }
 
     private Behavior<OrderManagerMessage> updateStatus(UpdateOrderStatusMessage updateOrderStatusMessage) {
+        Optional<ActorRef<OrderMessage>> maybeOrder  = Optional.ofNullable(orderRepositoryStub.getOrder(updateOrderStatusMessage.getId()));
 
+        if (maybeOrder.isEmpty()) {
+            log.error("Order {} does not exist", updateOrderStatusMessage.getId());
+            return this;
+        }
 
+        Optional<OrderStatus> maybeStatus = Optional.ofNullable(updateOrderStatusMessage.getStatus());
+        if (maybeStatus.isEmpty()) {
+            log.error("Status not found!");
+        }
+        maybeOrder.get().tell(updateOrderStatusMessage);
         return this;
     }
 

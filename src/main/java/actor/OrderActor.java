@@ -6,6 +6,7 @@ import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 import message.OrderMessage;
+import message.impl.GetListOfOrdersMessage;
 import message.impl.UpdateOrderStatusMessage;
 import state.Created;
 import state.OrderStatus;
@@ -30,7 +31,14 @@ public class OrderActor extends AbstractBehavior<OrderMessage> {
     public Receive<OrderMessage> createReceive() {
         return newReceiveBuilder()
                 .onMessage(UpdateOrderStatusMessage.class, this::updateStatus)
+                .onMessage(GetListOfOrdersMessage.class, this::getOrderInfo)
                 .build();
+    }
+
+    private Behavior<OrderMessage> getOrderInfo(GetListOfOrdersMessage getListOfOrdersMessage) {
+        String log = String.format("|  ID %-5s | %-20s |", getId(), getStatus().getClass().getSimpleName());
+        getContext().getLog().info(log);
+        return this;
     }
 
     private Behavior<OrderMessage> updateStatus(UpdateOrderStatusMessage updateOrderStatusMessage) {

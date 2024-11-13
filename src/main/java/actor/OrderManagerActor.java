@@ -7,6 +7,7 @@ import message.OrderManagerMessage;
 import message.OrderMessage;
 import message.impl.CreateOrderMessage;
 import message.impl.DeleteOrderMessage;
+import message.impl.GetListOfOrdersMessage;
 import message.impl.UpdateOrderStatusMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ import repository.OrderRepositoryStub;
 import state.Created;
 import state.OrderStatus;
 
+import java.util.List;
 import java.util.Optional;
 
 public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
@@ -31,11 +33,18 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
                 .onMessage(CreateOrderMessage.class, this::createOrder)
                 .onMessage(UpdateOrderStatusMessage.class, this::updateStatus)
                 .onMessage(DeleteOrderMessage.class, this::deleteOrder)
+                .onMessage(GetListOfOrdersMessage.class, this::getList)
                 .build();
     }
 
+    private Behavior<OrderManagerMessage> getList(GetListOfOrdersMessage getListOfOrdersMessage) {
+        List<ActorRef<OrderMessage>> orderActors = orderRepositoryStub.getAllOrders();
+        orderActors.forEach(orderActor -> orderActor.tell(getListOfOrdersMessage));
+        return this;
+    }
+
     private Behavior<OrderManagerMessage> deleteOrder(DeleteOrderMessage deleteOrderMessage) {
-        Optional<ActorRef<OrderMessage>> maybeOrder  = Optional.ofNullable(orderRepositoryStub.getOrder(deleteOrderMessage.getId()));
+        Optional<ActorRef<OrderMessage>> maybeOrder = Optional.ofNullable(orderRepositoryStub.getOrder(deleteOrderMessage.getId()));
 
         if (maybeOrder.isEmpty()) {
             log.error("Order {} does not exist", deleteOrderMessage.getId());
@@ -49,7 +58,7 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
     }
 
     private Behavior<OrderManagerMessage> updateStatus(UpdateOrderStatusMessage updateOrderStatusMessage) {
-        Optional<ActorRef<OrderMessage>> maybeOrder  = Optional.ofNullable(orderRepositoryStub.getOrder(updateOrderStatusMessage.getId()));
+        Optional<ActorRef<OrderMessage>> maybeOrder = Optional.ofNullable(orderRepositoryStub.getOrder(updateOrderStatusMessage.getId()));
 
         if (maybeOrder.isEmpty()) {
             log.error("Order {} does not exist", updateOrderStatusMessage.getId());
@@ -66,7 +75,7 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
 
 
     private Behavior<OrderManagerMessage> createOrder(CreateOrderMessage createOrderMessage) {
-        ActorRef<OrderMessage> maybeOrder  = orderRepositoryStub.getOrder(createOrderMessage.getId());
+        ActorRef<OrderMessage> maybeOrder = orderRepositoryStub.getOrder(createOrderMessage.getId());
 
         if (maybeOrder != null) {
             log.error("Order already exists with ID {}", createOrderMessage.getId());
@@ -74,7 +83,7 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
         }
 
         int orderId = createOrderMessage.getId();
-        ActorRef<OrderMessage> orderActor  = getContext().spawn(OrderActor.create(Integer.toString(orderId), new Created()), "OrderActor-" + orderId);
+        ActorRef<OrderMessage> orderActor = getContext().spawn(OrderActor.create(Integer.toString(orderId), new Created()), "OrderActor-" + orderId);
 
         orderRepositoryStub.createOrder(createOrderMessage.getId(), orderActor);
         log.info("Created a new order with ID {}", createOrderMessage.getId());
@@ -83,6 +92,6 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
     }
 
     public static Behavior<OrderManagerMessage> createBehavior() {
-        return Behaviors.setup(context -> new OrderManagerActor(context, new OrderRepositoryStub() ));
+        return Behaviors.setup(context -> new OrderManagerActor(context, new OrderRepositoryStub()));
     }
 }

@@ -50,3 +50,5 @@ c
 3src/main/java/message/impl/SetCompletedMessage.java,1/e/1eff35aa9626642ac69e0566209bf9f1d1c402ab
 a
 1src/main/java/message/impl/SetCreatedMessage.java,3/8/3844579e42e9997957a1ecc797ad6872658cc3a5
+f
+6src/main/java/message/impl/GetListOfOrdersMessage.java,5/1/51e5e87ca97231189cf52ebc45966f571a01534f

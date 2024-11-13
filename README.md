@@ -93,12 +93,6 @@ Command not found!
 
 - Basic logging is implemented to capture all actions performed on the system, such as creating, updating, and deleting orders.
 
-## Non-Functional Requirements
-
-- Use of Akka Actor Typed and state management.
-- Simple but functional CLI for interacting with the system.
-- Minimum logging for operations.
-
 ## Conclusion
 
 This project demonstrates the use of Akka Actors for building a simple, scalable order management system. The use of the State design pattern ensures that each order can transition through different states, while the actor model provides concurrency and isolation between orders.

@@ -1,0 +1,6 @@
+
+“
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78Û§¿°²2
+}	java:S125"<This block of commented-out lines of code should be removed.(›žá:8ÂÖ¶°²2J$163d0b99-53c8-4cf5-8df1-0c7a8cd17f2a
+n
+java:S1128",Remove this unused import 'state.Completed'.(—™ø)8¾¶°²2J$af47574a-c13f-49e5-9a70-cfb6945f0c14

@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32c033e-8338-46ab-ad7e-c6141b9fec06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/StateContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e574d27158a4d80c5d119260b0445ad0e88c04a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/57c157db1ea60998ec5aa98960b9a78ae2882ba7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderActor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actor/OrderManagerActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exception/OrderActorStateException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/UpdateOrderStatusMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Cancelled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/state/Completed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Completed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/state/Created.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/Created.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/state/InProgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/InProgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/message/impl/DeleteOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/impl/DeleteOrderMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +90,7 @@
       <updated>1731154424610</updated>
       <workItem from="1731154425925" duration="13102000" />
       <workItem from="1731420565299" duration="6622000" />
-      <workItem from="1731504444012" duration="5004000" />
+      <workItem from="1731504444012" duration="5787000" />
     </task>
     <servers />
   </component>
@@ -118,7 +102,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

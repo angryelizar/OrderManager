@@ -9,8 +9,8 @@ public class DeleteOrderMessage implements OrderManagerMessage {
         this.id = id;
     }
 
-    public String getId() {
-        return id;
+    public int getId() {
+        return Integer.parseInt(id);
     }
 
     public void setId(String id) {

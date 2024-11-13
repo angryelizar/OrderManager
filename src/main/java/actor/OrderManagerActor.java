@@ -6,6 +6,7 @@ import akka.actor.typed.javadsl.*;
 import message.OrderManagerMessage;
 import message.OrderMessage;
 import message.impl.CreateOrderMessage;
+import message.impl.DeleteOrderMessage;
 import message.impl.UpdateOrderStatusMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,22 @@ public class OrderManagerActor extends AbstractBehavior<OrderManagerMessage> {
         return newReceiveBuilder()
                 .onMessage(CreateOrderMessage.class, this::createOrder)
                 .onMessage(UpdateOrderStatusMessage.class, this::updateStatus)
+                .onMessage(DeleteOrderMessage.class, this::deleteOrder)
                 .build();
+    }
+
+    private Behavior<OrderManagerMessage> deleteOrder(DeleteOrderMessage deleteOrderMessage) {
+        Optional<ActorRef<OrderMessage>> maybeOrder  = Optional.ofNullable(orderRepositoryStub.getOrder(deleteOrderMessage.getId()));
+
+        if (maybeOrder.isEmpty()) {
+            log.error("Order {} does not exist", deleteOrderMessage.getId());
+            return this;
+        }
+
+        log.info("Deleting order {}", deleteOrderMessage.getId());
+        getContext().stop(maybeOrder.get());
+        orderRepositoryStub.deleteOrder(deleteOrderMessage.getId());
+        return this;
     }
 
     private Behavior<OrderManagerMessage> updateStatus(UpdateOrderStatusMessage updateOrderStatusMessage) {
